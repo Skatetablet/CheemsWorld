@@ -2,6 +2,7 @@ package mx.itson.cheemsworld
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
         val mapaFragment = supportFragmentManager.findFragmentById(R.id.mapa) as SupportMapFragment
         mapaFragment.getMapAsync(this)
-        obtenerVistas();
+        obtenerVisitas()
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
     }
 
-    fun obtenerVistas() {
+    fun obtenerVisitas() {
         val call: Call<List<Visita>> = RetrofitUtil.getApi()!!.getVisitas()
         call.enqueue(object : Callback<List<Visita>> {
             override fun onResponse(call: Call<List<Visita>>, response: Response<List<Visita>>) {
@@ -47,11 +48,13 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
                 for (v in visitas) {
                     val latlng = LatLng(v.latitud!!, v.longitud!!)
                     mapa!!.addMarker(MarkerOptions().position(latlng).icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_cheems)))
+                    Toast.makeText(this@MainActivity, "TEST", Toast.LENGTH_SHORT).show()
                 }
+
             }
 
             override fun onFailure(call: Call<List<Visita>>, t: Throwable) {
-
+                Toast.makeText(this@MainActivity, "fail", Toast.LENGTH_SHORT).show()
             }
 
         })
