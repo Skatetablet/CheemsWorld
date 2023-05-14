@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
             }
 
             override fun onFailure(call: Call<List<Visita>>, t: Throwable) {
-                TODO("Not yet implemented")
+
             }
 
         })
