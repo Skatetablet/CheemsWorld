@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bgcheems">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="@string/lugar"
+            android:textSize="40dp" />
+
+        <EditText
+            android:textColor="@color/white"
+            android:id="@+id/txtLugar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:focusable="true"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="@string/motivo"
+            android:textSize="40dp" />
+
+        <EditText
+            android:textColor="@color/white"
+            android:id="@+id/txtMotivo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:focusable="true"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="@string/responsable"
+            android:textSize="40dp" />
+
+        <EditText
+            android:textColor="@color/white"
+            android:id="@+id/txtResponsable"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="30dp"
+            android:layout_marginBottom="50dp"/>
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:text="GUARDAR" />
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:text="CANCELAR" />
+
+    </LinearLayout>
+</LinearLayout>

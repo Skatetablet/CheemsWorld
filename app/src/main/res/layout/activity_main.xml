@@ -12,4 +12,18 @@
         android:layout_height="match_parent"
         android:name="com.google.android.gms.maps.SupportMapFragment"/>
 
+
+
+    <ImageButton
+        android:id="@+id/agregarVisita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:contentDescription="Agregar icon"
+        android:padding="20dp"
+        android:src="@drawable/plusicon"
+        app:tint="#fff" />
+
+
+
 </RelativeLayout>

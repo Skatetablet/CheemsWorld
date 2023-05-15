@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">CheemsWorld</string>
+    <string name="app_name">Cheems World</string>
+    <string name="lugar">Lugar</string>
+    <string name="motivo">Motivo</string>
+    <string name="responsable">Responsable</string>
+    <string name="add">Agregar</string>
+
+
 </resources>

@@ -16,6 +16,12 @@
         android:theme="@style/Theme.CheemsWorld"
         tools:targetApi="31">
         <activity
+            android:name=".NuevaVisitaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VerVisitaActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -24,9 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--<meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCKc8f3fapfEpawpOPRyYGL8FL5XNO3kvI"/>-->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCKc8f3fapfEpawpOPRyYGL8FL5XNO3kvI"/>
