@@ -4,6 +4,8 @@
     <string name="motivo">Motivo</string>
     <string name="responsable">Responsable</string>
     <string name="add">Agregar</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
 
 
 </resources>

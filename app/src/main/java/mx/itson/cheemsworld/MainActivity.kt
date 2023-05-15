@@ -10,10 +10,7 @@ import android.location.LocationListener
 import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
 import android.widget.ImageButton
-import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -76,7 +73,6 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener{
                 val visitas : List<Visita> = response.body()!!
                 mapa?.clear()
                 for (v in visitas) {
-
                     val latlng = LatLng(v.latitud!!, v.longitud!!)
                     mapa!!.addMarker(MarkerOptions().position(latlng).icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_cheems)))
                     mapa?.setOnMarkerClickListener(object: GoogleMap.OnMarkerClickListener {
@@ -100,7 +96,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener{
             }
 
             override fun onFailure(call: Call<List<Visita>>, t: Throwable) {
-                TODO("Not yet implemented")
+
             }
 
 
